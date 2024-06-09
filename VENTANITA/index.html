@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La ventanita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: #0408ff;
+            padding: 10px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .menu a:hover {
+            background-color: #c70039;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #005a9c;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        }
+        .menu a:hover .submenu {
+            display: block;
+        }
+        .page {
+    padding: 20px;
+    background-color: white; 
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0); 
+    margin-top: 20px;
+           }
+           #Refrescos {
+    background-color: #ffffff; /
+             }
+
+      #Sabritas {
+    background-color: #0bfae6; /
+}
+
+#Lacteos {
+    background-color: #fffb15; /
+    
+             }
+
+ 
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .product {
+            width: 30%;
+            border: 1px solid #33f70c;
+            padding: 10px;
+            margin-bottom: 50px;
+            box-shadow: 0px 0px 5px rgb(255, 255, 255);
+        }
+   
+
+
+
+        .product h3 {
+            margin-top: 0;
+        }
+        .cart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .cart h3 {
+            margin-top: 0;
+        }
+        .cart table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .cart th,
+        .cart td {
+            border: 5px solid #070606;
+            padding: 10px;
+            text-align: left;
+        }
+        .cart th {
+            background-color: #10ff7b;
+            color: white;
+        }
+        .cart .total {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <a href="file:///C:/HERBALIFE/index.html#inicio">Inicio</a>
+            <a href="file:///C:/HERBALIFE/index.html#productos">Productos
+                </a><div class="submenu"><a href="file:///C:/HERBALIFE/index.html#productos">
+                    </a><a href="file:///C:/HERBALIFE/index.html#Sabritas">Sabritas</a>
+                    <a href="file:///C:/HERBALIFE/index.html#Vinos">Vinos</a>
+                    <a href="file:///C:/HERBALIFE/index.html#Lacteos">Lacteos</a>
+                    <a href="file:///C:/HERBALIFE/index.html#Refrescos">Refrescos</a>
+               
+                </div>
+            
+            <a href="file:///C:/HERBALIFE/index.html#carrito">Carrito</a>
+            <a href="file:///C:/HERBALIFE/index.html#comprar">Comprar</a>
+            <a href="file:///C:/HERBALIFE/index.html#contacto">Contacto</a>
+        </div>
+        <div id="inicio" class="page">
+            <h1>Bienvenido a Abarrotes la "Ventanita"</h1>
+            <p>Los abarrotes son productos de consumo diario que se venden en tiendas pequeñas o locales especializados. Estos productos suelen incluir alimentos no perecederos como arroz, frijoles, pasta, enlatados, así como productos de limpieza y otros artículos de uso doméstico básico.</p>
+        </div>
+        <div id="productos" class="page">
+            <h1>Algunos de nuestros Productos</h1>
+            <div id="Sabritas" class="subpage">
+                <h2>Sabritas</h2>
+                <div class="product-list"  >
+                    <div class="product"  style="border-color: #0c24f7;">
+                        <img src="sabritas.jpg" style="width:250px" height="auto;" alt="vinos 1">
+                        <h3>Sabritas</h3>
+                        <p>Precio: $18</p>
+                        <button class="add-to-cart" data-product-id="1">Añadir al carrito</button>
+                    </div>
+                    <div class="product"    style="border-color: #0c24f7;">
+                        <img src="doritos.jpg" style="width:250px" height="auto;" alt="vinos 2">
+                        <h3>Doritos</h3>
+                        <p>Precio: $18</p>
+                        <button class="add-to-cart" data-product-id="2">Añadir al carrito</button>
+                    </div>
+                    <div class="product"    style="border-color: #0c24f7;">
+                        <img src="churrumais.jpg" style="width:250px" height="auto;" alt="vinos 3">
+                        <h3>Churrumais</h3>
+                        <p>Precio: $13</p>
+                        <button class="add-to-cart" data-product-id="3">Añadir al carrito</button>
+                    </div>
+                    <div class="product"    style="border-color: #0c24f7;">
+                        <img src="descarga.jpg" style="width:250px" height="auto;" alt="vinos 2">
+                        <h3>Papas sol</h3>
+                        <p>Precio: $18</p>
+                        <button class="add-to-cart" data-product-id="4">Añadir al carrito</button>
+                    </div>
+                    <div class="product"   style="border-color: #0c24f7;">
+                        <img src="chi.jpg" style="width:250px" height="auto;" alt="vinos 2">
+                        <h3>Chips</h3>
+                        <p>Precio: $19</p>
+                        <button class="add-to-cart" data-product-id="5">Añadir al carrito</button>
+                    </div>
+                    <div class="product"  style="border-color: #0c24f7;">
+                        <img src="tak.jpg" style="width:250px" height="auto;" alt="vinos 2">
+                        <h3>Takis</h3>
+                        <p>Precio: $17</p>
+                        <button class="add-to-cart" data-product-id="6">Añadir al carrito</button>
+                    </div>
+                    <div class="product"   style="border-color: #0c24f7;">
+                        <img src="act.jpg" style="width:250px" height="auto;" alt="vinos 2">
+                        <h3>Palomitas ACT II</h3>
+                        <p>Precio: $20</p>
+                        <button class="add-to-cart" data-product-id="7">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div id="Vinos" class="subpage">
+                <h2>Vinos</h2>
+                <div class="product-list">
+                    <div class="product">
+                        <img src="vino_tinto.jpg" style="width:150px" height="auto;" alt="sabritas 1">
+                        <h3>Vino tinto</h3>
+                        <p>Precio: $50</p>
+                        <button class="add-to-cart" data-product-id="8">Añadir al carrito</button>
+                    </div>
+                    <div class="product">
+                        <img src="espum.jpg" style="width:150px" height="auto;" alt="sabritas 2">
+                        <h3>Vino espumoso</h3>
+                        <p>Precio: $70</p>
+                        <button class="add-to-cart" data-product-id="9">Añadir al carrito</button>
+                    </div>
+                    <div class="product">
+                        <img src="vino_blanco.webp" style="width:150px" height="auto;" alt="sabritas 3">
+                        <h3>Vino blanco</h3>
+                        <p>Precio: $120</p>
+                        <button class="add-to-cart" data-product-id="10">Añadir al carrito</button>
+                    </div>
+                    <div class="product">
+                        <img src="vino_rosado.avif" style="width:150px" height="auto;" alt="sabritas 3">
+                        <h3>Vino rosado</h3>
+                        <p>Precio: $155</p>
+                        <button class="add-to-cart" data-product-id="11">Añadir al carrito</button>
+                    </div>
+                    <div class="product">
+                        <img src="post.jpg" style="width:250px" height="auto;" alt="sabritas 3">
+                        <h3>Vino de postre</h3>
+                        <p>Precio: $190</p>
+                        <button class="add-to-cart" data-product-id="12">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div id="Lacteos" class="subpage">
+                <h2>Lacteos</h2>
+                <div class="product-list">
+                
+                        <div class="product"  style="border-color: #f7890c;"  >
+                        <img src="yog.jpg" style="width:250px" height="auto;" alt="gamesa 1">
+                        <h3>Yoghurt</h3>
+                        <p>Precio: $30</p>
+                        <button class="add-to-cart" data-product-id="13">Añadir al carrito</button>
+                    </div>
+                    
+                        <div class="product"    style="border-color: #f7890c;">
+                            <img src="lal.jpg" style="width:250px" height="auto;" alt="gamesa 1">
+                            <h3>Leche</h3>
+                            <p>Precio: $25</p>
+                            <button class="add-to-cart" data-product-id="13">Añadir al carrito</button>
+                        </div>
+                            <div class="product"    style="border-color: #f7890c;">
+                                <img src="che.jpg" style="width:250px" height="auto;" alt="gamesa 1">
+                                <h3>Queso cheddar</h3>
+                                <p>Precio: $100 k</p>
+                                <button class="add-to-cart" data-product-id="13">Añadir al carrito</button>
+                            </div>
+                            <div class="product"    style="border-color: #f7890c;">
+                                <img src="man.jpg" style="width:250px" height="auto;" alt="gamesa 1">
+                                <h3>Manttequilla</h3>
+                                <p>Precio: $25</p>
+                                <button class="add-to-cart" data-product-id="13">Añadir al carrito</button>
+                            </div>
+                            <div class="product"   style="border-color: #f7890c;">
+                                <img src="crle.jpg" style="width:250px" height="auto;" alt="gamesa 1">
+                                <h3>Crema de leche</h3>
+                                <p>Precio: $25</p>
+                                <button class="add-to-cart" data-product-id="13">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+         <div id="Refrescos" class="subpage">
+                <h2>Refrescos</h2>
+                <div class="product-list"><div class="product" style="border-color: #f70cf7;">
+                        <img src="coca-cola.jpg" style="width:250px" height="auto;" alt="refrescos1">
+                        <h3>Coca-Cola</h3>
+                        <p>Precio: $40</p>
+                        <button class="add-to-cart" data-product-id="14">Añadir al carrito</button>
+                    </div>
+                    <div class="product"  style="border-color: #f70cf7;">
+                        <img src="red_cola.jpg" style="width:250px" height="auto;" alt="refrescos 2">                    
+                        <h3>Red cola</h3>
+                        <p>Precio: $31</p>
+                        <button class="add-to-cart" data-product-id="15">Añadir al carrito</button>
+                    </div>
+                    <div class="product" style="border-color: #f70cf7;">
+                        <img src="jarritos.jpg" style="width:250px" height="auto;" alt="refrescos 3">
+                        <h3>Jarritos</h3>
+                        <p>Precio: $21</p>
+                        <button class="add-to-cart" data-product-id="16">Añadir al carrito</button>
+                    </div>
+                    <div class="product" style="border-color: #f70cf7;">
+                        <img src="pep.jpg" style="width:250px" height="auto;" alt="refrescos 3">
+                        <h3>Pepsi</h3>
+                        <p>Precio: $37</p>
+                        <button class="add-to-cart" data-product-id="17">Añadir al carrito</button>
+                    </div>
+                    <div class="product" style="border-color: #f70cf7;">
+                        <img src="spr.jpg" style="width:250px" height="auto;" alt="refrescos 3">
+                        <h3>Sprite</h3>
+                        <p>Precio: $35</p>
+                        <button class="add-to-cart" data-product-id="18">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                       
+            <div id="carrito" class="page cart">
+    <h1>Carrito de Compras</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio Unitario</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody class="cart-items"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total</td>
+                <td class="total"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div id="comprar" class="page">
+        <h1>Finalizar Compra</h1>
+        <p>Por favor, complete el siguiente formulario para finalizar su compra:</p>
+        <form id="purchase-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required="">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required="">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required="">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" required="">
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+        <p id="mensaje" style="display:none;">Los datos se han guardado correctamente.</p>
+    </div>
+    
+
+        <div id="contacto" class="page">
+            <h1>Contáctanos</h1>
+            <p>Si tiene alguna pregunta o comentario, no dude en comunicarse con nosotros:</p>
+            <ul>
+                <li>Teléfono: 5620717009</li>
+                <li>Dirección: Carr. Sta. Ana San Luis, Santa Ana Tlachihualpa</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const cartItemsElement = document.querySelector('.cart-items');
+            const totalElement = document.querySelector('.total');
+            const purchaseForm = document.getElementById('purchase-form');
+            const mensaje = document.getElementById('mensaje');
+    
+            let cart = [];
+    
+            function addToCart(productId) {
+                const product = products.find(p => p.id === parseInt(productId));
+                const existingProductIndex = cart.findIndex(p => p.id === parseInt(productId));
+    
+                if (existingProductIndex !== -1) {
+                    cart[existingProductIndex].quantity++;
+                } else {
+                    cart.push({ ...product, quantity: 1 });
+                }
+    
+                updateCart();
+            }
+    
+            function removeFromCart(productId) {
+                const productIndex = cart.findIndex(p => p.id === parseInt(productId));
+                if (productIndex !== -1) {
+                    cart.splice(productIndex, 1);
+                    updateCart();
+                }
+            }
+    
+            function createRemoveButton(productId) {
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Eliminar';
+                removeButton.addEventListener('click', () => removeFromCart(productId));
+                return removeButton;
+            }
+    
+            function updateCart() {
+                cartItemsElement.innerHTML = '';
+                let total = 0;
+    
+                cart.forEach(product => {
+                    const cartItemElement = document.createElement('tr');
+                    cartItemElement.innerHTML = `
+                        <td>${product.name}</td>
+                        <td>$${product.price}</td>
+                        <td>${product.quantity}</td>
+                        <td>$${product.price * product.quantity}</td>
+                    `;
+                    const removeButton = createRemoveButton(product.id);
+                    const removeButtonCell = document.createElement('td');
+                    removeButtonCell.appendChild(removeButton);
+                    cartItemElement.appendChild(removeButtonCell);
+                    cartItemsElement.appendChild(cartItemElement);
+                    total += product.price * product.quantity;
+                });
+    
+                totalElement.textContent = `$${total}`;
+            }
+    
+            addToCartButtons.forEach(button => button.addEventListener('click', () => {
+                const productId = button.dataset.productId;
+                addToCart(productId);
+            }));
+    
+            purchaseForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evitar que el formulario se envíe
+                // Aquí podrías agregar el código para guardar los datos, como enviarlos a un servidor
+    
+                // Mostrar el mensaje de confirmación
+                mensaje.style.display = 'block';
+            });
+    
+            const products = [
+                { id: 1, name: 'Batido nutricional de vainilla', price: 90 },
+                { id: 2, name: 'Batido nutricional de chocolate', price: 90 },
+                { id: 3, name: 'Batido nutricional de fresa', price: 90 },
+                { id: 4, name: 'Batido nutricional de galletas y crema', price: 90 },
+                { id: 5, name: 'Batido nutricional de piña colada', price: 90 },
+                { id: 6, name: 'Batido nutricional de cafe latte', price: 90 },
+                { id: 7, name: 'Batido nutricional de fruas del bosque', price: 90 },
+                { id: 8, name: 'Fórmula 2 Multivitamínico Complejo', price: 40 },
+                { id: 9, name: 'Fórmula 3 Suplemento de Proteínas', price: 50 },
+                { id: 10, name: 'Fibra y Hierbas', price: 40 },
+                { id: 11, name: 'Calcio Plus', price: 51 },
+                { id: 12, name: 'Herbalifeline', price: 55 },
+                { id: 13, name: 'Bebida Herbal Concentrada (Bebida de Hierbas)', price: 95 },
+                { id: 14, name: 'Fórmula 1 Sport', price: 35 },
+                { id: 15, name: 'CR7 Drive', price: 105 },
+                { id: 16, name: 'Prolong', price: 155 },
+                { id: 17, name: 'Rebuild Strength', price: 45 },
+                { id: 18, name: 'Herbalifeline Max', price: 200 },
+            ];
+        });
+    </script>
+    
+    
+     
+
+</body></html>
